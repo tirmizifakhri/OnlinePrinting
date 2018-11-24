@@ -1,32 +1,33 @@
-# OnlinePrinting
+﻿# OnlinePrinting
 
 PROJECT PROPOSAL GUIDELINES INFO 4302
 PROPOSAL FOR PROJECT DEVELOPMENT
 
 
-<PROJECT TITLE>
+PROJECT TITLE: Online Printing Order
 
-<GROUP NAME>
-<STUDENT NAME>
-<MATRIC NO.>
+GROUP NAME: Mobile01
+STUDENT NAME & MATRIC NO: 
+Balqis Abd Manan	1510722
+
 
 PROPOSAL FOR PROJECT DEVELOPMENT
 --------------------------------
 
 1.1 INTRODUCTION
 
-Select an application to be developed for your class project. Describe the criteria or
-specifications of the application that you are planning to develop for your class
-project.
+Our project is on online printing mobile app where IIUM community can order their printing needs using the app directly.
+
 
 1.2 PROBLEM DESCRIPTION
 
     1.2.1 Background of the problem
     -------------------------------    
-    Explain the environment in which you are planning to develop the application
-    (mobile application, web application, or pc software). Discuss who are the users,
-    how users are currently doing things/businesses and generally what are their
-    problems with the current applications or processes.
+    Environment for the application is mobile application. Our target user is IIUM community which consist of Staff and 
+    Students since they have their own ID. Currently the printing shop can accept online printing order but is unorganized.
+    There are too many platforms that customer can send the files to until the shop staff sometimes missed out some orders.
+    Current platforms use are Whatsapp, Email and USB to print out at the shop. 
+    
     
     1.2.2 Problem Statement
     -----------------------
