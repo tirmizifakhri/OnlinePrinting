@@ -7,7 +7,7 @@ PROPOSAL FOR PROJECT DEVELOPMENT
 PROJECT TITLE: Online Printing Order
 
 GROUP NAME: Mobile01
-STUDENT NAME & MATRIC NO: 
+STUDENT NAME        &   MATRIC NO: 
 Balqis Abd Manan	1510722
 
 
@@ -31,28 +31,33 @@ Our project is on online printing mobile app where IIUM community can order thei
     
     1.2.2 Problem Statement
     -----------------------
-    Describe or list the specific problems with the existing application or processes that
-    you are considering to automate or enhance through your proposed application.
+    Currently people are stil queueing up at the shop and need to wait for their turn to use the computer and print their 
+    needs. It is troublesome for the customers and also the staff in charge since they need to prepare the order quickly at
+    the same time hectic when there are errors in the print output. For online ordering, currently the shop uses Email and
+    Whatsapp as a platform. Since there are more than one platforms, staff in charge may missed out 1 or 2 orders because.
+    It is also ambigious to direct each new customers on how is the flow of the online ordering.
 
 
 1.3 PROJECT OBJECTIVE
 
-Explain what do you want to achieve at the end of this project. For the report, what
-are the reports that you will produce? For the application, what are the processes
-that will be automated from the list of the problems that you have identified in the
-problem statement (1.2.2)?
+To make a mobile application where it can simplify the process of customers ordering online for their printing items.
+There will be a login part to identify that the user is from IIUM. A page where user can choose their print settings and
+an upload files field to send the files that they want to print directly to the shop. After that, user will be navigated 
+to payment gateway in order for them to pay first to proceed with their order. This is to secure transaction between
+the shop and the users in case the shop have printed their items but the customer never comes to pick it up. 
+Hence, there will be a status order to notify the user on when they can pick up their item. 
 
 
 1.4 PROJECT SCOPE
 
     1.4.1 Scope
     -----------
-    Describe the scope of the application that will be developed.
+    The scope is for printing normal documents like assignments and notes. 
 
     1.4.2 Targeted User
     -------------------
-    List down your target users by age group, business, department, etc.
-
+    Target users are staffs and students of IIUM.
+    
     1.4.3 Specific Platform
     -----------------------
     Discuss the infrastructure that you need for the development and execution of the
@@ -64,20 +69,22 @@ problem statement (1.2.2)?
 
 1.5 CONSTRAINTS
 
-Explain what do you foresee as the major constraints for your project development
-e.g. budget, time, users’ commitment, etc.
+Constraints that may occur is time and budget since the application we wanted to develop 
+is given about 3 weeks to complete and we as students do not have budget to use more sophiscticated
+software.
 
 
 1.6 PROJECT STAGES
 
-Discuss the major milestones of your project (Gantt Chart) i.e. what are they & by
-what specific dates (when) they will be produced.
+Task 1: Plan the flow of the application -> Due: 27-11-2018 
+Task 2: -> Due: 
+Task 3: -> Due: 
+Task 4: -> Due: 
 
 
 1.7 SIGNIFICANCE OF THE PROJECT
 
-Discuss the benefits of your project for each targeted user.
-
+With this application, customers can save their time when they want to print their items and avoid queueing at the shop.
 
 1.8 SUMMARY
 
