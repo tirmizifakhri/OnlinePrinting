@@ -31,8 +31,8 @@ Our project is on online printing mobile app where IIUM community can order thei
     
     1.2.2 Problem Statement
     -----------------------
-    Describe or list the specific problems with the existing application or processes that
-    you are considering to automate or enhance through your proposed application.
+    - Manual printing services in IIUM need to be upgraded with online printing service where it solve problem for those who do not want to queue in front of printing shop to print their assignments or any documents.
+    - Printing shop in IIUM did not operate 24 hours a day, thus it cannot help student that need urgent printing services
 
 
 1.3 PROJECT OBJECTIVE
@@ -51,7 +51,7 @@ problem statement (1.2.2)?
 
     1.4.2 Targeted User
     -------------------
-    List down your target users by age group, business, department, etc.
+    This application only used for IIUM community where their identification is determined by their email and mtric number.
 
     1.4.3 Specific Platform
     -----------------------
