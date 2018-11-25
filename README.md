@@ -31,11 +31,8 @@ Our project is on online printing mobile app where IIUM community can order thei
     
     1.2.2 Problem Statement
     -----------------------
-    Currently people are stil queueing up at the shop and need to wait for their turn to use the computer and print their 
-    needs. It is troublesome for the customers and also the staff in charge since they need to prepare the order quickly at
-    the same time hectic when there are errors in the print output. For online ordering, currently the shop uses Email and
-    Whatsapp as a platform. Since there are more than one platforms, staff in charge may missed out 1 or 2 orders because.
-    It is also ambigious to direct each new customers on how is the flow of the online ordering.
+    - Manual printing services in IIUM need to be upgraded with online printing service where it solve problem for those who do not want to queue in front of printing shop to print their assignments or any documents.
+    - Printing shop in IIUM did not operate 24 hours a day, thus it cannot help student that need urgent printing services
 
 
 1.3 PROJECT OBJECTIVE
@@ -56,8 +53,8 @@ Hence, there will be a status order to notify the user on when they can pick up 
 
     1.4.2 Targeted User
     -------------------
-    Target users are staffs and students of IIUM.
-    
+    This application only used for IIUM community where their identification is determined by their email and mtric number.
+
     1.4.3 Specific Platform
     -----------------------
     Discuss the infrastructure that you need for the development and execution of the
