@@ -9,7 +9,7 @@ PROJECT TITLE: Online Printing Order
 GROUP NAME: Mobile01
 STUDENT NAME        &   MATRIC NO: 
 Balqis Abd Manan	1510722
-
+Wan Muhammad Iqbal b Wan Mhd Noor 1524269
 
 PROPOSAL FOR PROJECT DEVELOPMENT
 --------------------------------
@@ -29,9 +29,12 @@ the business hour, they only need to  upload it into this app and collect their 
     1.2.1 Background of the problem
     -------------------------------    
     Environment for the application is mobile application. Our target user is IIUM community which consist of Staff and 
-    Students since they have their own ID. Currently the printing shop can accept online printing order but is unorganized.
-    There are too many platforms that customer can send the files to until the shop staff sometimes missed out some orders.
-    Current platforms use are Whatsapp, Email and USB to print out at the shop. 
+    Students since they have their own ID(Matric number & staff ID). Currently the printing shop can accept online printing order but it is unorganized.
+    There are too many platforms that the customer use to send the files that cause the shop's staff sometimes missed out some orders.
+    The platforms that we recieve orders from the customer are Whatsapp, Email and USB drive to print out at the shop. Therefore, by creating a
+    mobile application as a medium to recieve order from the customer, we hope that it will ease our work and organize the order soo that we will not miss any order
+    from the customer.
+    
     
     
     1.2.2 Problem Statement
@@ -39,7 +42,7 @@ the business hour, they only need to  upload it into this app and collect their 
     - Manual printing services in IIUM need to be upgraded with online printing service where it solve problem for those who do not want to queue in front of printing
       shop to print their assignments or any documents.
     - Printing shop in IIUM did not operate 24 hours a day, thus it cannot help student that need urgent printing services
-
+    - Some of the students sometimes didnt have much time to queu and print their assignments or any documents. 
 
 1.3 PROJECT OBJECTIVE
 
@@ -55,11 +58,11 @@ Hence, there will be a status order to notify the user on when they can pick up 
 
     1.4.1 Scope
     -----------
-    The scope is for printing normal documents like assignments and notes. 
+    The scope is for printing normal documents like assignments and notes. The printing can be choose either in black and white or in colour.  
 
     1.4.2 Targeted User
     -------------------
-    This application only used for IIUM community where their identification is determined by their email and matric number.
+    This application only can be used for IIUM community where their identification is determined by their email and matric number.
 
     1.4.3 Specific Platform
     -----------------------
@@ -91,7 +94,10 @@ Task 4: Test the functionality and flow of the application -> Due: 14-12-2018
 
 1.7 SIGNIFICANCE OF THE PROJECT
 
-With this application, customers can save their time when they want to print their items and avoid queueing at the shop.
+With this application, customers can save their time when they want to print their items and avoid queueing at the shop. The customers espesially the students sometimes 
+finish their assignments and projects in the night and they cannot print their works because there is no printing shop available 24 hours, soo they need to wait in the 
+morning to print it. By using this application, they can just send their documents through the application and pick it up the next day or during their free time. This 
+application will also ease the printing staff works as they receive order in an organize way therefore avoid them from overlooked any unprint documents. 
 
 1.8 SUMMARY
 
