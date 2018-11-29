@@ -8,8 +8,10 @@ PROJECT TITLE: Online Printing Order
 
 GROUP NAME: Mobile01
 STUDENT NAME        &   MATRIC NO: 
+Muhammad Tirmizi Fakhri 1519129
 Balqis Abd Manan	1510722
 Wan Muhammad Iqbal b Wan Mhd Noor 1524269
+WAN MUHAMMAD IQBAL BIN WAN MHD NOOR 1524269
 
 PROPOSAL FOR PROJECT DEVELOPMENT
 --------------------------------
@@ -82,6 +84,10 @@ Hence, there will be a status order to notify the user on when they can pick up 
 Constraints that may occur is time and budget since the application we wanted to develop 
 is given about 3 weeks to complete and we as students do not have budget to use more sophiscticated
 software.
+There few better features that will be good if it can be applied into this system such as auto printed order received. Such feature
+currently is quite complicated as some of the setup need to be done in the printer itself and we need to upgrade the current printer
+so that it can use the auto print system where will require a lot of expenses. Therefore, we just implement a manual online order
+system where all order received will be printed manually.
 
 
 1.6 PROJECT STAGES
@@ -107,4 +113,4 @@ their printing items right in time.
 
 1.9 REFERENCES
 
-Any references used for the proposal (Use APA format).
+
