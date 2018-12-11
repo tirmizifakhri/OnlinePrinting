@@ -9,7 +9,7 @@ export default class OrderScreen extends Component {
         <Text>Order Screen</Text>
         </View>
         <View style={styles.button}>
-        <Button onPress={() => this.props.navigation.navigate('Order')} title="Order" />
+        <Button onPress={() => this.props.navigation.navigate('Payment')} title="Pay Now" />
         </View>
       </View>
     );
