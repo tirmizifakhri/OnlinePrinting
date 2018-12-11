@@ -13,6 +13,9 @@ export default class App extends Component {
         <Button onPress={() => this.props.navigation.navigate('Order')} title="Order" />
         <Button onPress={() => this.props.navigation.navigate('OrderStatus')} title="OrderStatus" />
         </View>
+        <View style={styles.button}>
+        <Button onPress={() => this.props.navigation.navigate('Login')} title="Sign Out" />
+        </View>
       </View>
     );
   }

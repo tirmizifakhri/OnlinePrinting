@@ -11,6 +11,7 @@ export default class App extends Component {
            </View>
         <View style={styles.button}>
         <Button onPress={() => this.props.navigation.navigate('Home')} title="Sign In" />
+        <Button onPress={() => this.props.navigation.navigate('Admin')} title="Sign In (Admin)" />
         </View>
        </View>
     );
