@@ -6,7 +6,7 @@ export default class OrderScreen extends Component {
     return (
       <View style={styles.container}>
         <View>
-        <Text>Order Screen</Text>
+        <Text>Order</Text>
         </View>
         <View style={styles.button}>
         <Button onPress={() => this.props.navigation.navigate('Payment')} title="Pay Now" />
