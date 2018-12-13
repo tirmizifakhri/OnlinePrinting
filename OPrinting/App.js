@@ -9,7 +9,6 @@ import OrderStatusScreen from "./screens/OrderStatusScreen";
 import AdminScreen from "./screens/AdminScreen";
 
 
-
 const RootStack = createStackNavigator(
   {
     Login: LoginScreen,

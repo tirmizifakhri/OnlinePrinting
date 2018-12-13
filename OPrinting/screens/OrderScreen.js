@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import { View, Text, StyleSheet, Button } from "react-native";
 import { render } from 'react-dom';
 import '../App.css';
-import FormContainer from '.././containers/FormContainer';
+import FormContainer from './containers/FormContainer';
 
 
 

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
+//import { Container, Text, Button } from "native-base";
+
 
 
 export default class App extends Component {
