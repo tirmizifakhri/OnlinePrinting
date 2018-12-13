@@ -1,25 +1,31 @@
-import React, { Component } from 'react';
-//import { View, Text, StyleSheet, Button } from "react-native";
-import { render } from 'react-dom';
-import '../App.css';
-import FormContainer from './containers/FormContainer';
+import React, { Component } from "react";
+import { View, Text, StyleSheet, Button } from "react-native";
 
-
-
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
-
-class OrderScreen extends Component {
+export default class OrderScreen extends Component {
   render() {
     return (
-      <div className="col-md-6">
-        <h3> Sample Form Container </h3>
-        <FormContainer />
-      </div>
+      <View style={styles.container}>
+        <View>
+        <Text>Order Screen</Text>
+        </View>
+        <View style={styles.button}>
+        <Button onPress={() => this.props.navigation.navigate('Payment')} title="Pay Now" />
+        </View>
+      </View>
     );
   }
 }
 
-render(<App />, document.getElementById("root"));
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    textAlignVertical: 'top',
+  },
+  button: {
+    flexDirection: 'row'  
+  }
+});
