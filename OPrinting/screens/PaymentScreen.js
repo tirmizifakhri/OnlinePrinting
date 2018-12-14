@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
-//import { Container, Text, Button } from "native-base";
+import { Container,Header, Footer, Content } from "native-base";
 
 
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
+     /* <View style={styles.container}>
         <View>
         <Text>Payment Screen</Text>
         </View>
@@ -15,6 +15,18 @@ export default class App extends Component {
         <Button onPress={() => this.props.navigation.navigate('OrderStatus')} title="Pay" />
         </View>
       </View>
+      */
+     <Container>
+       <Header>
+
+       </Header>
+       <Content>
+        <Button onPress={() => this.props.navigation.navigate('OrderStatus')} title="Pay" />
+       </Content>
+       <Footer>
+
+       </Footer>
+     </Container>
     );
   }
 }
