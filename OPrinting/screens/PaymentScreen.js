@@ -1,29 +1,50 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
-import { Container,Header, Footer, Content } from "native-base";
+import { View, StyleSheet} from "react-native";
+import { Container,Header, Footer, Content, Button, Text, Form, Item, Picker } from "native-base";
 
 
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      price: 0,
+      selected2: undefined
+    };
+  }
+
   render() {
     return (
-     /* <View style={styles.container}>
-        <View>
-        <Text>Payment Screen</Text>
-        </View>
-        <View style={styles.button}>
-        <Button onPress={() => this.props.navigation.navigate('OrderStatus')} title="Pay" />
-        </View>
-      </View>
-      */
+
      <Container>
        <Header>
-
+        <Text style={styles.header}>PAYMENT</Text>
        </Header>
-       <Content>
-        <Button onPress={() => this.props.navigation.navigate('OrderStatus')} title="Pay" />
+       <Content justifyContent={'center'}>
+       <Form>
+            <Text margin={20} fontSize={25} alignItems={'center'}>Total Price: RM{this.state.price}</Text>
+            <Item picker>
+              <Text>Payment Method</Text>
+              <Picker
+                mode="dropdown"
+                style={{ width: undefined }}
+                placeholder="Select your SIM"
+                placeholderStyle={{ color: "#bfc6ea" }}
+                placeholderIconColor="#007aff"
+                selectedValue={this.state.selected2}
+                onValueChange={(itemValue, itemIndex) => this.setState({selected2: itemValue})}
+              >
+                <Picker.Item label="Wallet" value="key0" />
+                <Picker.Item label="ATM Card" value="key1" />
+                <Picker.Item label="Debit Card" value="key2" />
+                <Picker.Item label="Credit Card" value="key3" />
+                <Picker.Item label="Net Banking" value="key4" />
+              </Picker>
+            </Item>
+          </Form>
        </Content>
        <Footer>
+              <Button style={styles.button} margin={5} width={250} light onPress={() => this.props.navigation.navigate('OrderStatus')}><Text fontWeight={'bold'}>Pay</Text></Button>
 
        </Footer>
      </Container>
@@ -41,6 +62,17 @@ const styles = StyleSheet.create({
       textAlignVertical: 'top',
     },
     button: {
-      flexDirection: 'row'  
+      flexDirection: 'row',  
+      justifyContent:'center',
+    },
+    header:{
+      fontSize: 30,
+      fontWeight: 'bold',
+      color: '#eff5ff',
+      marginTop: 5
     }
+
+
+
+
   });
