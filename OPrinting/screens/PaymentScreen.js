@@ -9,7 +9,7 @@ export default class App extends Component {
     super(props);
     this.state = {
       price: 0,
-      selected2: undefined
+      payMethod: undefined
     };
   }
 
@@ -31,10 +31,10 @@ export default class App extends Component {
                 placeholder="Select your SIM"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
-                selectedValue={this.state.selected2}
-                onValueChange={(itemValue, itemIndex) => this.setState({selected2: itemValue})}
+                selectedValue={this.state.payMethod}
+                onValueChange={(itemValue, itemIndex) => this.setState({payMethod: itemValue})}
               >
-                <Picker.Item label="Wallet" value="key0" />
+                <Picker.Item label="---" value="key0" />
                 <Picker.Item label="ATM Card" value="key1" />
                 <Picker.Item label="Debit Card" value="key2" />
                 <Picker.Item label="Credit Card" value="key3" />

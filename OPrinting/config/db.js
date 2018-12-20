@@ -4,12 +4,12 @@ import '@firebase/storage';
 import '@firebase/auth';
 
  let config = {
-  apiKey: "AIzaSyBz5bBfpfiV8E4nx0umCz1_AN5s5zdpenU",
-  authDomain: "oprinting-466a2.firebaseapp.com",
-  databaseURL: "https://oprinting-466a2.firebaseio.com",
-  projectId: "oprinting-466a2",
-  storageBucket: "oprinting-466a2.appspot.com",
-  messagingSenderId: "409358991213"
+  apiKey: "AIzaSyBrdHREz5n1-zNSV1IwKLoQeyaH7ZJrRqY",
+  authDomain: "mizi-test.firebaseapp.com",
+  databaseURL: "https://mizi-test.firebaseio.com",
+  projectId: "mizi-test",
+  storageBucket: "mizi-test.appspot.com",
+  messagingSenderId: "472119117142"
   };
 let app = Firebase.initializeApp(config);
 export const db = app.database();
