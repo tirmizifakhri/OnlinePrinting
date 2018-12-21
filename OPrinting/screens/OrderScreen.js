@@ -1,9 +1,46 @@
 import React, { Component } from "react";
 import { StyleSheet, TextInput} from "react-native";
-import { Footer, Header, Content, Container, Item, Picker, Form, Text, Button} from "native-base";
+import { Footer, Header, Content, Container, Item, Picker, Form, Text, Button, Input} from "native-base";
+import axios from 'axios';
 
 export default class OrderScreen extends Component {
+  state ={
+    selectedFile: null
+  }
+  fileSelectedHandler = event => {
+    this.setState({selectedFile: event.target.files[0]})
+  }
 
+  fileUploadHandler = () => {
+    const fd = new FormData();
+    fd.append('image', 'testName');
+     fd.append('photo',{
+       uri: photo.uri,
+       type: image/jpeg,
+       name: this.state.selectedFile
+     });
+     const url="gs://oprinting-4ef57.appspot.com/"
+     fetch(url,{
+       method: 'post',
+       body: fd
+     }).then(res=>{
+       console.log(res)
+     });
+    }
+
+ /* fileUploadHandler = () => {
+    const fd = new FormData();
+    fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
+      axios.post('https://console.firebase.google.com/project/oprinting-4ef57/overview', fd, {
+        onUploadProgress: ProgressEvent => {
+          console.log('Upload progress: ' + Math.round(progressEvent.loaded/progressEvent.total* 100)+ '%')
+        }
+      })
+      .then(res =>{
+          console.log(res);
+      })
+  } */
+  
   constructor(){
     super();
     this.state = {
@@ -90,6 +127,11 @@ export default class OrderScreen extends Component {
                 <Picker.Item label="Landscape" value="key1" />
               </Picker>
             </Item>
+
+            <Input style={{display: 'none'}}type="file" onChange ={this.fileSelectedHandler}
+            ref={fileInput => this.fileInput = fileInput} />
+            <Button onPress={() => this.fileInput}><Text>Pick File</Text></Button>
+            <Button onPress={this.fileUploadHandler}><Text>Upload</Text></Button>
           </Form>
       </Content>
 
