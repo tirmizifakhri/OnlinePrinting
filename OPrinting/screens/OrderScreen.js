@@ -53,10 +53,9 @@ export default class OrderScreen extends Component {
         totalPage: this.state.totalPage,
         price: this.state.price
     });
-
+    
     //navigate to next page once data stored
-    this.props.navigation.navigate('Payment');
-  
+    this.props.navigation.navigate('Payment')
   }
   
 
@@ -93,5 +92,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row'  
   }
 });
-
 

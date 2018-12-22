@@ -1,16 +1,40 @@
 import React, { Component } from "react";
 import { View, StyleSheet} from "react-native";
 import { Container,Header, Footer, Content, Button, Text, Form, Item, Picker } from "native-base";
+import {OrderScreen} from "./OrderScreen";
+import {db} from '../config/db';
 
-
+let orderRef = db.ref('/order');
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      order: [],
+      orderID: null,
+      totalPage: 0,
       price: 0,
       payMethod: undefined
     };
+  }
+
+  componentDidMount() {
+    let query = orderRef.orderByChild("orderID");
+      query.on('value', (snapshot) => {
+      let data = snapshot.val();
+          if(data){
+            let firebaseData = Object.values(data);
+            this.setState({order: firebaseData},()=>{
+              this.state.order.map((element) => {
+                this.setState({
+                  orderID: element.orderID,
+                  totalPage: element.totalPage,
+                  price: element.price
+                });
+              });
+            });
+          }
+     });
   }
 
   render() {
@@ -76,3 +100,5 @@ const styles = StyleSheet.create({
 
 
   });
+
+  
