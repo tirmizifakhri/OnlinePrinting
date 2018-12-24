@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, TextInput } from "react-native";
+import { View, StyleSheet, Text, TextInput, Button } from "react-native";
+// import { Container, Header, Content, Form, Item, Input, Label } from "native-base";
 
 
 export default class App extends Component {
@@ -14,6 +15,21 @@ export default class App extends Component {
   }
   render() {
     return (
+      // <Container>
+      //   <Header />
+      //   <Content>
+      //     <Form>
+      //       <Item floatinglabel>
+      //       <Label>Username</Label>
+      //       <Input />
+      //       </Item>
+      //       <Item floatinglabel last>
+      //       <Label>Password</Label>
+      //       <Inout />
+      //       </Item>
+      //     </Form>
+      //   </Content>
+      // </Container>
        <View style={styles.container}>
            <View style={styles.title}>
            <Text>ONLINE PRINTING</Text>
