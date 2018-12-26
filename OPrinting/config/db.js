@@ -4,12 +4,12 @@ import '@firebase/storage';
 import '@firebase/auth';
 
  let config = {
-  apiKey: "AIzaSyDc0wyCFKIG8zzIAM8aKuHU_wsrQU8Pc6Y",
-    authDomain: "oprinting-4ef57.firebaseapp.com",
-    databaseURL: "https://oprinting-4ef57.firebaseio.com",
-    projectId: "oprinting-4ef57",
-    storageBucket: "oprinting-4ef57.appspot.com",
-    messagingSenderId: "915067445029"
+  apiKey: "AIzaSyAkiBUpwb-3EjZ8TC6OT4nNQ-52bsCwrjY",
+    authDomain: "react-native-7871f.firebaseapp.com",
+    databaseURL: "https://react-native-7871f.firebaseio.com",
+    projectId: "react-native-7871f",
+    storageBucket: "react-native-7871f.appspot.com",
+    messagingSenderId: "823831857106"
   };
 let app = Firebase.initializeApp(config);
 export const db = app.database();
