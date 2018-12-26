@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, TextInput, Alert } from "react-native";
+import { View, Text, Button, StyleSheet, TextInput, Alert } from "react-native";
+// import { Button } from 'native-base';
 import { db } from '../config/db';
 
 
@@ -62,9 +63,14 @@ export default class App extends Component {
            </View>
            <View>
              <Button onPress={() => this.props.navigation.navigate('Home')} title="Sign Up"/>
-             <Button light onPress={() => this.saveData()} title="Zass" />
            </View>
        </View>
+      //  <Container>
+      //    <Content>
+           
+      //    <Button light onPress={() => this.saveData()} title="Zass" />
+      //    </Content>
+      //  </Container>
     );
   }
 }
