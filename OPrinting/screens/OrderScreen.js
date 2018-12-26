@@ -12,9 +12,9 @@ export default class OrderScreen extends Component {
       orderID: 0, //auto generate id
       totalPage: 0,
       price: 0,
-      name: '',
-      id: '', //matric or staff id
-      phone: '',
+      // name: '',
+      // id: '', //matric or staff id
+      // phone: '',
       print: undefined,
       output: undefined,
       layout: undefined,
@@ -87,8 +87,8 @@ export default class OrderScreen extends Component {
   //validate data inserted before stored inside firebase
   saveData = () =>{
 
-    if(this.state.orderID && this.state.totalPage && this.state.price && this.state.name && this.state.id
-       && this.state.phone && this.state.print && this.state.output && this.state.layout && this.state.orientation){
+    if(this.state.orderID && this.state.totalPage && this.state.price /*&& this.state.name && this.state.id
+       && this.state.phone */ && this.state.print && this.state.output && this.state.layout && this.state.orientation){
         this.addOrder();
     } 
     else{
@@ -102,10 +102,10 @@ export default class OrderScreen extends Component {
     db.ref('/order').child(this.state.orderID).set({
         orderID: this.state.orderID,
         totalPage: this.state.totalPage,
-        price: this.state.price,
-        name: this.state.name,
-        id: this.state.id,
-        phone: this.state.phone,
+        // price: this.state.price,
+        // name: this.state.name,
+        // id: this.state.id,
+        // phone: this.state.phone,
         print: this.state.print,
         output: this.state.output,
         layout: this.state.layout,
@@ -113,7 +113,7 @@ export default class OrderScreen extends Component {
     });
     
     //navigate to next page once data stored
-    this.props.navigation.navigate('Payment')
+    this.props.navigation.navigate('Payment',{orderID: this.state.orderID, price: this.state.price})
   }
   
 
@@ -125,9 +125,9 @@ export default class OrderScreen extends Component {
   </Header>
     <Content>     
       <Form>
-      <TextInput placeholder="Name:" onChangeText={(name) => this.setState({name})}  />
+      {/* <TextInput placeholder="Name:" onChangeText={(name) => this.setState({name})}  />
       <TextInput placeholder="Matric/Staff ID:" onChangeText={(id) => this.setState({id})}  />
-      <TextInput placeholder="Phone no." onChangeText={(phone) => this.setState({phone})}  />
+      <TextInput placeholder="Phone no." onChangeText={(phone) => this.setState({phone})}  /> */}
      
       <Item picker>
       <Text>Print :</Text>

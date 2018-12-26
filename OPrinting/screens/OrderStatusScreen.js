@@ -1,18 +1,25 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { StyleSheet } from "react-native";
+import { Container,Header, Icon, Footer, Content, Button, Text, Form, Item, Picker } from "native-base";
+
 
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View>
-        <Text>Order Status Screen</Text>
-        </View>
-        <View style={styles.button}>
-        <Button onPress={() => this.props.navigation.navigate('Home')} title="Home" />
-        </View>
-      </View>
+      <Container>
+      <Content justifyContent={'center'}>
+
+      </Content>
+      <Footer>
+             <Button style={styles.button} margin={5} light onPress={() => this.props.navigation.navigate('Home')}>
+             <Icon name="home"/>
+             <Text fontWeight={'bold'}>HOME</Text>
+             </Button>
+
+      </Footer>
+    </Container>
+
     );
   }
 }
