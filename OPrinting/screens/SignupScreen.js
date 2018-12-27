@@ -16,15 +16,24 @@ export default class App extends Component {
     }
   }
 
-  saveData = () =>{
+  setMatricNo = (value) =>{
+    this.setState({ matricNo: value});
+    this.setMatricNo();
+  }
 
-    if(this.state.matricNo && this.state.username && this.state.email && this.state.password){
-        this.addOrder();
-    } 
-    else{
-       Alert.alert('Status','Empty Field(s)!');
-    }
+  setUsername = (value) =>{
+    this.setState({ username: value});
+    this.setUsername();
+  }
 
+  setEmail = (value) =>{
+    this.setState({ email: value});
+    this.setEmail();
+  }
+
+  setPassword = (value) =>{
+    this.setState({ password: value});
+    this.setPassword();
   }
 
   addOrder =  () => {
@@ -48,6 +57,18 @@ export default class App extends Component {
     //navigate to next page once data stored
     this.props.navigation.navigate('Login')
   }
+
+  saveData = () =>{
+
+    if(this.state.matricNo && this.state.username && this.state.email && this.state.password){
+        this.addOrder();
+    } 
+    else{
+       Alert.alert('Status','Empty Field(s)!');
+    }
+
+  }
+
 
 
 
@@ -76,8 +97,9 @@ export default class App extends Component {
             <TextInput placeholder="Enter your email" onChangetext={(email) => this.setState({email})}>Email:</TextInput>
             <TextInput placeholder="Confirm password" onChangeText={(password) => this.setState({password})}>Password:</TextInput>
            </Form>
+           <Button primary onPress={() => this.saveData()}><Text> Primary </Text></Button>
            
-         <Button light onPress={() => this.saveData()} title="Zass" />
+          {/* <Button onPress={() => this.saveData()} title="Zass" /> */}
          </Content>
        </Container>
     );
