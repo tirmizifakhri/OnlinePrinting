@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TextInput, Alert } from "react-native";
-import { Button } from 'native-base';
+import { Container, Content, Header, Form, Button } from 'native-base';
 import { db } from '../config/db';
 
 
@@ -56,17 +56,26 @@ export default class App extends Component {
       //  <View style={styles.container}>
       //      <Text>REGISTER</Text>
       //      <View>
-      //        <TextInput placeholder="Enter your matric number" onChangetext={(matricNo) => this.setState({matricNo})}>Matric No:</TextInput>
-      //        <TextInput placeholder="Enter your username" onChangetext={(username) => this.setState({username})}>Username:</TextInput>
-      //        <TextInput placeholder="Enter your email" onChangetext={(email) => this.setState({email})}>Email:</TextInput>
-      //        <TextInput placeholder="Confirm password" onChangeText={(password) => this.setState({password})}>Password:</TextInput>
+            //  <TextInput placeholder="Enter your matric number" onChangetext={(matricNo) => this.setState({matricNo})}>Matric No:</TextInput>
+            //  <TextInput placeholder="Enter your username" onChangetext={(username) => this.setState({username})}>Username:</TextInput>
+            //  <TextInput placeholder="Enter your email" onChangetext={(email) => this.setState({email})}>Email:</TextInput>
+            //  <TextInput placeholder="Confirm password" onChangeText={(password) => this.setState({password})}>Password:</TextInput>
       //      </View>
       //      <View>
       //        <Button onPress={() => this.props.navigation.navigate('Home')} title="Sign Up"/>
       //      </View>
       //  </View>
        <Container>
+         <Header>
+          <Text>SIGNUP PAGE</Text>
+         </Header>
          <Content>
+           <Form>
+            <TextInput placeholder="Enter your matric number" onChangetext={(matricNo) => this.setState({matricNo})}>Matric No:</TextInput>
+            <TextInput placeholder="Enter your username" onChangetext={(username) => this.setState({username})}>Username:</TextInput>
+            <TextInput placeholder="Enter your email" onChangetext={(email) => this.setState({email})}>Email:</TextInput>
+            <TextInput placeholder="Confirm password" onChangeText={(password) => this.setState({password})}>Password:</TextInput>
+           </Form>
            
          <Button light onPress={() => this.saveData()} title="Zass" />
          </Content>
