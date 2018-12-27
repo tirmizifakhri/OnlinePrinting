@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, Button, StyleSheet, TextInput, Alert } from "react-native";
-// import { Button } from 'native-base';
+import { View, Text, StyleSheet, TextInput, Alert } from "react-native";
+import { Button } from 'native-base';
 import { db } from '../config/db';
 
 
@@ -53,24 +53,24 @@ export default class App extends Component {
 
   render() {
     return (
-       <View style={styles.container}>
-           <Text>REGISTER</Text>
-           <View>
-             <TextInput placeholder="Enter your matric number" onChangetext={(matricNo) => this.setState({matricNo})}>Matric No:</TextInput>
-             <TextInput placeholder="Enter your username" onChangetext={(username) => this.setState({username})}>Username:</TextInput>
-             <TextInput placeholder="Enter your email" onChangetext={(email) => this.setState({email})}>Email:</TextInput>
-             <TextInput placeholder="Confirm password" onChangeText={(password) => this.setState({password})}>Password:</TextInput>
-           </View>
-           <View>
-             <Button onPress={() => this.props.navigation.navigate('Home')} title="Sign Up"/>
-           </View>
-       </View>
-      //  <Container>
-      //    <Content>
+      //  <View style={styles.container}>
+      //      <Text>REGISTER</Text>
+      //      <View>
+      //        <TextInput placeholder="Enter your matric number" onChangetext={(matricNo) => this.setState({matricNo})}>Matric No:</TextInput>
+      //        <TextInput placeholder="Enter your username" onChangetext={(username) => this.setState({username})}>Username:</TextInput>
+      //        <TextInput placeholder="Enter your email" onChangetext={(email) => this.setState({email})}>Email:</TextInput>
+      //        <TextInput placeholder="Confirm password" onChangeText={(password) => this.setState({password})}>Password:</TextInput>
+      //      </View>
+      //      <View>
+      //        <Button onPress={() => this.props.navigation.navigate('Home')} title="Sign Up"/>
+      //      </View>
+      //  </View>
+       <Container>
+         <Content>
            
-      //    <Button light onPress={() => this.saveData()} title="Zass" />
-      //    </Content>
-      //  </Container>
+         <Button light onPress={() => this.saveData()} title="Zass" />
+         </Content>
+       </Container>
     );
   }
 }
