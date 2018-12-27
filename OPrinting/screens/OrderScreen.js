@@ -12,6 +12,7 @@ export default class OrderScreen extends Component {
       orderID: 0, //auto generate id
       totalPage: 0,
       price: 0,
+      upload: null,
       // name: '',
       // id: '', //matric or staff id
       // phone: '',
@@ -82,13 +83,19 @@ export default class OrderScreen extends Component {
     this.setOrientation();
   }
 
+  setUpload = (value) => {
+    this.setState({upload: value});
+    this.setUpload();
+  }
+
 
 
   //validate data inserted before stored inside firebase
   saveData = () =>{
 
-    if(this.state.orderID && this.state.totalPage && this.state.price /*&& this.state.name && this.state.id
-       && this.state.phone */ && this.state.print && this.state.output && this.state.layout && this.state.orientation){
+    if(this.state.orderID && this.state.totalPage && this.state.price && this.state.name && this.state.id
+       && this.state.phone  && this.state.print && this.state.output && this.state.layout && this.state.orientation
+       && this.state.upload){
         this.addOrder();
     } 
     else{
@@ -102,6 +109,7 @@ export default class OrderScreen extends Component {
     db.ref('/order').child(this.state.orderID).set({
         orderID: this.state.orderID,
         totalPage: this.state.totalPage,
+        upload: this.state.upload,
         // price: this.state.price,
         // name: this.state.name,
         // id: this.state.id,
@@ -125,9 +133,9 @@ export default class OrderScreen extends Component {
   </Header>
     <Content>     
       <Form>
-      {/* <TextInput placeholder="Name:" onChangeText={(name) => this.setState({name})}  />
+      <TextInput placeholder="Name:" onChangeText={(name) => this.setState({name})}  />
       <TextInput placeholder="Matric/Staff ID:" onChangeText={(id) => this.setState({id})}  />
-      <TextInput placeholder="Phone no." onChangeText={(phone) => this.setState({phone})}  /> */}
+      <TextInput placeholder="Phone no." onChangeText={(phone) => this.setState({phone})}  />
      
       <Item picker>
       <Text>Print :</Text>
@@ -197,7 +205,7 @@ export default class OrderScreen extends Component {
       </Item>
   
         <TextInput placeholder ="How many pages? Enter here" onChangeText={this.setTotalPage} />
-
+        <Text>Google Drive link:</Text><TextInput placeholder="Paste share link here" onChangeText={this.setUpload}/>
         <Text>Price :{this.state.price.toFixed(2)}</Text>
           <Button onPress={() => this.setPrice()} title="Calculate" />
       </Form>
