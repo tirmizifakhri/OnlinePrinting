@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-// import { View, StyleSheet, Text, TextInput, Button } from "react-native";
-import { View, StyleSheet, Text, TextInput, Button } from 'react-native';
-import { Container, Header, Content, Form, Item, Input, Label } from "native-base";
+import { View, StyleSheet, Text, TextInput, Button, Image } from 'react-native';
+import { Container, Header, Content, Form, H1, Icon, Item, Input, Label } from "native-base";
 
 
 export default class App extends Component {
@@ -11,44 +10,44 @@ export default class App extends Component {
     this.state = {
       email: '',
       password: '',
-      password2: ''
     }
   }
+
+  // controllerLogin=()=> {
+
+  //   const {email,password}=this.state
+  //   firebase
+  //   .auth()
+  //   .signInWithEmailAndPassword(email,password)
+  //   .then(user=>this.props.navigation.navigate('Home'))
+  //   .catch(error=>this.setState({ errorMessage:error,message}))
+    
+  // }
+
   render() {
     return (
-      <Container>
-        <Header>
-          <Text style={styles.header}>LOGIN</Text>
-        </Header>
+      <Container style={styles.container}>
         <Content>
-          <Form>
-          <TextInput placeholder="Email" onChangeText={(email) => this.setState({email})}  />
-          <TextInput placeholder="Password" onChangeText={(password) => this.setState({password})}  />
-            {/* <Item floatinglabel>
-            <Label>Username</Label>
-            <Input />
-            </Item> */}
-            {/* <Item floatinglabel last>
-            <Label>Password</Label>
-            <Input />
-            </Item> */}
+        <H1 style={styles.header}>ONLINE PRINTING</H1>
+          <Form style={{marginTop:50}}>
+            <View style={styles.inputContainer} >
+              <Icon name='person' style={{width:30, height:30, marginLeft:15, justifyContent: 'center'}} />
+              <TextInput style={styles.inputText} placeholder="Matric No" onChangeText={(matricNo) => this.setState({matricNo})}  />
+              
+            </View>
+            <View style={styles.inputContainer}>
+              <Icon name='key' style={{width:30, height:30, marginLeft:15, justifyContent: 'center'}} />
+              <TextInput style={styles.inputText} placeholder="Password" onChangeText={(password) => this.setState({password})}  />
+            </View>
           </Form>
           <View style={styles.button}>
             <Button onPress={() => this.props.navigation.navigate('Home')} title="Log In" />
-            <Button onPress={() => this.props.navigation.navigate('Admin')} title="Log In (Admin)" />
+          </View>
+          <View style={styles.button}>
             <Button onPress={() => this.props.navigation.navigate('Signup')} title="Sign Up" />
           </View>
         </Content>
       </Container>
-      //  <View style={styles.container}>
-      //      <View style={styles.title}>
-      //      <Text>ONLINE PRINTING</Text>
-      //      </View>
-           
-        
-        
-      //   </View>
-      //  </View>
     );
   }
 }
@@ -61,18 +60,36 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: '#F5FCFF',
       textAlignVertical: 'top',
+      // backgroundColor: '#006c70'
     },
     title: {
       flexDirection: 'column',
       justifyContent: 'flex-start',
     },
     button: {
-      flexDirection: 'column'  
+      flexDirection: 'column',
+      marginTop: 10,
+    },
+    inputContainer: {
+      borderBottomColor: '#F5FCFF',
+      backgroundColor: '#FFFFFF',
+      borderRadius:30,
+      borderBottomWidth: 1,
+      width:250, height:45,
+      marginBottom:20,
+      flexDirection: 'row',
+      alignItems:'center'
+    },
+    inputText: {
+      height:45,
+      marginLeft:16,
+      borderBottomColor: '#FFFFFF',
+      flex:1
     },
     header:{
       fontSize: 30,
       fontWeight: 'bold',
-      color: '#eff5ff',
-      marginTop: 5
+      color: 'black',
+      marginTop: 100
     }
   });

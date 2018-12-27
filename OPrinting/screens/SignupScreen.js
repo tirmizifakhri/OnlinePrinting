@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TextInput, Alert } from "react-native";
-import { Container, Content, Header, Form, Button } from 'native-base';
+import { Container, Content, Header, Form, Button, Item, Label, Input } from 'native-base';
 import { db } from '../config/db';
 
 
@@ -9,31 +9,28 @@ export default class App extends Component {
   constructor(){
     super();
     this.state = {
-      matricNo: '',
-      username: '',
-      email: '',
-      password: ''
+      matricNo: null,
+      username: null,
+      email: null,
+      password: null,
+      errorMessage: null
     }
   }
 
   setMatricNo = (value) =>{
     this.setState({ matricNo: value});
-    this.setMatricNo();
   }
 
   setUsername = (value) =>{
     this.setState({ username: value});
-    this.setUsername();
   }
 
   setEmail = (value) =>{
     this.setState({ email: value});
-    this.setEmail();
   }
 
   setPassword = (value) =>{
     this.setState({ password: value});
-    this.setPassword();
   }
 
   addOrder =  () => {
@@ -60,7 +57,13 @@ export default class App extends Component {
 
   saveData = () =>{
 
-    if(this.state.matricNo && this.state.username && this.state.email && this.state.password){
+    // Alert.alert(this.state.matricNo);
+    // Alert.alert(this.state.username);
+    // Alert.alert(this.state.email);
+    // Alert.alert(this.state.password);
+
+    
+    if(this.state.matricNo && this.state.username && this.state.email && this.state.password ){
         this.addOrder();
     } 
     else{
@@ -69,7 +72,36 @@ export default class App extends Component {
 
   }
 
+  controllerSignUp=()=> {
 
+    const {matricNo, username, email, password}=this.state
+    firebase
+    .auth()
+    .createUserWithEmailAndPassword(email,password)
+    .then(user=>this.props.navigation.navigate('Login'))
+    .catch(error=>this.setState({ errorMessage:error,message}))
+    
+    
+    firebase.database().ref('/user').push(
+    
+    {
+    matricNo,
+    username,
+    email,
+    password
+    
+    }).then((data)=>{
+    
+    console.log('data',data)
+    
+    }).catch((error)=>{
+    
+    //error callback
+    console.log('error',error)
+    })
+    
+    
+    }
 
 
   render() {
@@ -88,18 +120,28 @@ export default class App extends Component {
       //  </View>
        <Container>
          <Header>
-          <Text>SIGNUP PAGE</Text>
+          <Text style={styles.header}>SIGNUP PAGE</Text>
          </Header>
          <Content>
            <Form>
-            <TextInput placeholder="Enter your matric number" onChangetext={(matricNo) => this.setState({matricNo})}>Matric No:</TextInput>
-            <TextInput placeholder="Enter your username" onChangetext={(username) => this.setState({username})}>Username:</TextInput>
-            <TextInput placeholder="Enter your email" onChangetext={(email) => this.setState({email})}>Email:</TextInput>
-            <TextInput placeholder="Confirm password" onChangeText={(password) => this.setState({password})}>Password:</TextInput>
+             <Item floatingLabel>
+               <Label>Matric No</Label>
+               <Input onChangeText={this.setMatricNo} />
+             </Item>
+             <Item floatingLabel>
+               <Label>Username</Label>
+               <Input onChangeText={this.setUsername} />
+             </Item>
+             <Item floatingLabel>
+               <Label>Email</Label>
+               <Input onChangeText={this.setEmail} />
+             </Item>
+             <Item floatingLabel last>
+               <Label>Password</Label>
+               <Input onChangeText={this.setPassword} />
+             </Item>
            </Form>
-           <Button primary onPress={() => this.saveData()}><Text> Primary </Text></Button>
-           
-          {/* <Button onPress={() => this.saveData()} title="Zass" /> */}
+           <Button rounded info style={{marginLeft: 150, marginTop: 40}} onPress={() => this.saveData()}><Text style={{color: '#eff5ff', fontSize: 15, fontWeight: 'bold'}}>        Signup        </Text></Button>
          </Content>
        </Container>
     );
@@ -116,6 +158,13 @@ const styles = StyleSheet.create({
       textAlignVertical: 'top',
     },
     button: {
-      flexDirection: 'row'  
+      flexDirection: 'column',
+      justifyContent: 'center'  
+    },
+    header:{
+      fontSize: 30,
+      fontWeight: 'bold',
+      color: '#eff5ff',
+      marginTop: 5
     }
   });
