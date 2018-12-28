@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, TextInput, Button, Image } from 'react-native';
-import { Container, Header, Content, Form, H1, Icon, Item, Input, Label } from "native-base";
+import { View, StyleSheet, TextInput, Button } from 'react-native';
+import { Container, Content, Form, H1, Icon } from "native-base";
 
 
 export default class App extends Component {
@@ -23,6 +23,7 @@ export default class App extends Component {
   //   .catch(error=>this.setState({ errorMessage:error,message}))
     
   // }
+
 
   render() {
     return (
