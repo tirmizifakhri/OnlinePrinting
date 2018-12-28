@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TextInput, Alert } from "react-native";
-import { Container, Content, Header, Form, Button, Item, Label, Input } from 'native-base';
+import { Container, Content, Header, H1, Form, Button, Item, Label, Input } from 'native-base';
 import { db } from '../config/db';
 
 
@@ -118,11 +118,12 @@ export default class App extends Component {
       //        <Button onPress={() => this.props.navigation.navigate('Home')} title="Sign Up"/>
       //      </View>
       //  </View>
-       <Container>
-         <Header>
+       <Container style={styles.container}>
+         {/* <Header>
           <Text style={styles.header}>SIGNUP PAGE</Text>
-         </Header>
+         </Header> */}
          <Content>
+           <H1 style={styles.header}>SIGN UP</H1>
            <Form>
              <Item floatingLabel>
                <Label>Matric No</Label>
@@ -141,7 +142,7 @@ export default class App extends Component {
                <Input onChangeText={this.setPassword} />
              </Item>
            </Form>
-           <Button rounded info style={{marginLeft: 150, marginTop: 40}} onPress={() => this.saveData()}><Text style={{color: '#eff5ff', fontSize: 15, fontWeight: 'bold'}}>        Signup        </Text></Button>
+           <Button rounded info style={{ marginTop: 40}} onPress={() => this.saveData()}><Text style={{color: '#eff5ff', fontSize: 20, fontWeight: 'bold'}}>                   Signup                  </Text></Button>
          </Content>
        </Container>
     );
@@ -164,7 +165,8 @@ const styles = StyleSheet.create({
     header:{
       fontSize: 30,
       fontWeight: 'bold',
-      color: '#eff5ff',
-      marginTop: 5
+      color: 'black',
+      marginTop: 100,
+      marginLeft: 70
     }
   });
