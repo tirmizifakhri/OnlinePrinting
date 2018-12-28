@@ -124,7 +124,7 @@ export default class App extends Component {
              </Item>
              <Item floatingLabel last>
                <Label>Password</Label>
-               <Input onChangeText={this.setPassword} />
+               <Input secureTextEntry={true} onChangeText={this.setPassword} />
              </Item>
            </Form>
            <Button rounded info style={{ marginTop: 40}} onPress={() => this.saveData()}><Text style={{color: '#eff5ff', fontSize: 20, fontWeight: 'bold'}}>                   Signup                  </Text></Button>

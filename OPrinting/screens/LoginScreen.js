@@ -38,7 +38,7 @@ export default class App extends Component {
             </View>
             <View style={styles.inputContainer}>
               <Icon name='key' style={{width:30, height:30, marginLeft:15, justifyContent: 'center'}} />
-              <TextInput style={styles.inputText} placeholder="Password" onChangeText={(password) => this.setState({password})}  />
+              <TextInput secureTextEntry={true} style={styles.inputText} placeholder="Password" onChangeText={(password) => this.setState({password})}  />
             </View>
           </Form>
           <View style={styles.button}>
