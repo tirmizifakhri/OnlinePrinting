@@ -10,6 +10,7 @@ import '@firebase/auth';
     projectId: "react-native-7871f",
     storageBucket: "react-native-7871f.appspot.com",
     messagingSenderId: "823831857106"
+ 
   };
 let app = Firebase.initializeApp(config);
 export const db = app.database();
