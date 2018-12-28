@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Image, Button, ScrollView, TouchableOpacity, ListView } from "react-native";
+import { StyleSheet,  View, Image,  ScrollView, TouchableOpacity, ListView } from "react-native";
 import { Container,Header, Icon, Footer, Content, Button, Text, Form, Item, Picker } from "native-base";
 
 import firebase from 'react-native-firebase';
 
-const config={
+// const config={
 
-  apiKey: "AIzaSyBrdHREz5n1-zNSV1IwKLoQeyaH7ZJrRqY",
-    authDomain: "mizi-test.firebaseapp.com",
-    databaseURL: "https://mizi-test.firebaseio.com",
-    projectId: "mizi-test",
-    storageBucket: "mizi-test.appspot.com",
-    messagingSenderId: "472119117142"
-  };
-  firebase.initializeApp(config);
+//   apiKey: "AIzaSyBrdHREz5n1-zNSV1IwKLoQeyaH7ZJrRqY",
+//     authDomain: "mizi-test.firebaseapp.com",
+//     databaseURL: "https://mizi-test.firebaseio.com",
+//     projectId: "mizi-test",
+//     storageBucket: "mizi-test.appspot.com",
+//     messagingSenderId: "472119117142"
+//   };
+//   firebase.initializeApp(config);
 
 export default class App extends Component {
   
@@ -34,62 +34,62 @@ export default class App extends Component {
     layout: undefined,
     orientation: undefined,
   
-  dataSource:new ListView.DataSource({rowHasChanged:(r1,r2)=>r1!==r2}),
+//dataSource:new ListView.DataSource({rowHasChanged:(r1,r2)=>r1!==r2}),
   
   
   };
   }
 
-  componentWillMount(){
+  // componentWillMount(){
 
-    database.ref('/order').on('value', (snap)=>{
-    items=[];
-    snap.forEach((data)=>{
-         items.push({
-             key:data.key,
-             data:data.val(),
+  //   database.ref('/order').on('value', (snap)=>{
+  //   items=[];
+  //   snap.forEach((data)=>{
+  //        items.push({
+  //            key:data.key,
+  //            data:data.val(),
     
     
-         });
+  //        });
 
-        });
-        this.setState({dataSource:this.state.dataSource.cloneWithRows(items)});
+  //       });
+  //       this.setState({dataSource:this.state.dataSource.cloneWithRows(items)});
         
         
         
         
-        });
-        }
+  //       });
+  //       }
         
         
         
-        renderRow(data){
-        return(
+        // renderRow(data){
+        // return(
         
-        <View>
+        // <View>
         
-             <Text>orderID:{data.data.orderID}</Text>
-             <Text>totalPage:{data.data.totalPage}</Text>
-             <Text>price:{data.data.price}</Text>
-              <Text>print:{data.data.print}</Text>
-              <Text>output:{data.data.output}</Text>
-              <Text>layout:{data.data.layout}</Text>
-              <Text>orientation:{data.data.orientation}</Text>
-              <View style={{height:2, backgroundColor:'#006c70'}}/>
-        </View>
-        );
-        
-        
+        //      <Text>orderID:{data.data.orderID}</Text>
+        //      <Text>totalPage:{data.data.totalPage}</Text>
+        //      <Text>price:{data.data.price}</Text>
+        //       <Text>print:{data.data.print}</Text>
+        //       <Text>output:{data.data.output}</Text>
+        //       <Text>layout:{data.data.layout}</Text>
+        //       <Text>orientation:{data.data.orientation}</Text>
+        //       <View style={{height:2, backgroundColor:'#006c70'}}/>
+        // </View>
+        // );
         
         
         
-        }
+        
+        
+        // }
   
   render() {
     return (
       <ScrollView>
       <Container>
-      <Content justifyContent={'center'}>
+      {/* <Content justifyContent={'center'}>
 
       <View style={{flex: 1}}>
             <ListView 
@@ -106,7 +106,7 @@ export default class App extends Component {
              <Text fontWeight={'bold'}>HOME</Text>
              </Button>
 
-      </Footer>
+      </Footer> */}
     </Container>
     </ScrollView>
     );
